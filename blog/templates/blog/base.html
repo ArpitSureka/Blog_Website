@@ -39,22 +39,21 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">Admin</a></li>
-                    <li><a class="dropdown-item" href="#">Profile Settings</a></li>
+                    <li><a class="dropdown-item" href="{% url 'profile' %}">Profile Settings</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
                   </ul>
                 </li>
-                <div class="my-2 my-lg-0">
                 <li class="nav-item align-self-end">
                   <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
                 </li>
-                </div>
               {% else %}
-              <div class="my-2 my-lg-0">
-                <li class="nav-item mr-sm-2">
+                <li class="nav-item">
                   <a class="nav-link" href="{% url 'login' %}">Log In</a>
                 </li>
-              </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'register' %}">Register</a>
+                </li>
               {% endif %}
             </ul>
           </div>

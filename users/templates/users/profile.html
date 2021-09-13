@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="card col-sm-8">
+    <div class="card-body">
+    <div class="content-section"></div>
+    <div>
+        <img style="height: 300px; width: 300px;" class='rounded-circle account-img' src='{{ user.profile.image.url }}'>
+    </div>
+        <h1>
+            {{ user.username }}
+        </h1>
+        <h2>
+            {{ user.email }}
+        </h2>
+    </div>
+    </div>
+    </div>
+
+{% endblock content %}
